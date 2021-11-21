@@ -1,0 +1,56 @@
+{
+  "name": "sensor",
+  "version": "1.0.0",
+  "description": "Projeto Sensores de alto fluxo",
+  "scripts": {
+    "dev": "moleculer-runner --env --repl --hot services/**/*.service.js",
+    "start": "moleculer-runner services/**/*.service.js",
+    "cli": "moleculer connect Redis",
+    "ci": "jest --watch",
+    "test": "jest --coverage",
+    "lint": "eslint services",
+    "dc:up": "docker-compose up --build -d",
+    "dc:logs": "docker-compose logs -f",
+    "dc:down": "docker-compose down"
+  },
+  "keywords": [
+    "microservices",
+    "moleculer"
+  ],
+  "author": "",
+  "devDependencies": {
+    "eslint": "^7.23.0",
+    "jest": "^26.6.3",
+    "jest-cli": "^26.6.3"
+  },
+  "dependencies": {
+    "@moleculer/lab": "^0.6.2",
+    "bcryptjs": "2.4.3",
+    "cookie": "^0.4.1",
+    "crypto": "^1.0.1",
+    "dotenv": "^8.2.0",
+    "fakerator": "^0.3.4",
+    "ioredis": "^4.27.6",
+    "jsonwebtoken": "^8.5.1",
+    "lodash": "^4.17.21",
+    "moleculer": "^0.14.13",
+    "moleculer-db": "^0.8.14",
+    "moleculer-db-adapter-mongo": "^0.4.7",
+    "moleculer-fake": "^1.0.16",
+    "moleculer-repl": "^0.6.4",
+    "moleculer-web": "^0.9.1",
+    "nats": "^1.4.12",
+    "redlock": "^4.2.0"
+  },
+  "engines": {
+    "node": ">= 10.x.x"
+  },
+  "jest": {
+    "coverageDirectory": "../coverage",
+    "testEnvironment": "node",
+    "rootDir": "./services",
+    "roots": [
+      "../test"
+    ]
+  }
+}
