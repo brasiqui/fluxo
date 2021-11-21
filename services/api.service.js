@@ -65,6 +65,7 @@ module.exports = {
 				aliases: {			
 					"GET sensores": "sensores.listar",
 					"POST call": ["api.call"],
+					"/": "api.listAliases",
 				},
 
 				/** 
